@@ -1,12 +1,13 @@
 import csv
 import os
 
-#bank_cvs=os.path.join('C:/Users/ernes/Desktop/the class/python-challenge/pybank/budget_data.csv')
+
 
 months=[]
 PnL=[]
 
 #with open(bank_cvs, 'r') as csvfile:
+#bank_cvs=os.path.join('C:/Users/ernes/Desktop/the class/python-challenge/pybank/budget_data.csv')
 with open("budget_data.csv", 'r') as csvfile:
     csvread=csv.reader(csvfile)
     next(csvread,None)
@@ -22,10 +23,10 @@ Gdecrease=PnL[0]
 TotalR=0
 
 for R in range(len(PnL)):
-    if PnL[R] >= Gincrease:
-        Gincrease = PnL[R]
+    if PnL[R] > Gincrease:
+        Gincrease > PnL[R]
         Gmonth = months[R]
-    elif PnL[R] <= Gdecrease:
+    elif PnL[R] < Gdecrease:
         Gdecrease = PnL[R]
         LoMonth = months[R]
     TotalR += PnL[R]
