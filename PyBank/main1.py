@@ -6,8 +6,8 @@ import os
 months=[]
 PnL=[]
 
-#with open(bank_cvs, 'r') as csvfile:
-#bank_cvs=os.path.join('C:/Users/ernes/Desktop/the class/python-challenge/pybank/budget_data.csv')
+
+
 # reader to read the csv, variable/list to hold values for total revenue, increases and decrease 
 with open("budget_data.csv", 'r') as csvfile:
     csvread=csv.reader(csvfile)
@@ -37,7 +37,6 @@ for R in range(len(PnL)):
 AverageChange=round(TotalR/TotalMonths,2)
 
 #pushing information to text file and removing output path, and printing 
-#output=os.path.join('C:/Users/ernes/Desktop/the class/python-challenge/pybank/Analysis.txt')
 
 with open("Analysis2.txt",'w') as writefile:
     writefile.writelines('Financial Analysis\n')
